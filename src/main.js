@@ -1,12 +1,15 @@
 import { createApp } from "vue";
 import { createI18n } from "./i18n";
 import { createPinia } from "pinia";
+import { faker } from '@faker-js/faker';
 import router from "./router";
 import App from "./App.vue";
 import "./index.css";
 
 const i18n = createI18n();
 const pinia = createPinia();
+
+faker.setLocale('ro');
 
 createApp(App)
     .use(i18n)

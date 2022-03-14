@@ -18,6 +18,12 @@
 import { onMounted } from "@vue/runtime-core";
 import { useI18n } from "vue-i18n";
 import { inject } from "vue";
+import { faker } from '@faker-js/faker';
+
+const randomName = faker.name.findName();
+const randomCity = faker.address.city();
+const randomBear = faker.animal.bear();
+const randomAdverb = faker.word.adverb();
 
 const i18n = useI18n();
 
@@ -28,6 +34,11 @@ onMounted(() => {
     console.log(i18n.locale.value);
 
     console.log(message);
+
+    console.log(randomName)
+    console.log(randomCity)
+    console.log(randomBear);
+    console.log(randomAdverb)
 });
 </script>
 
