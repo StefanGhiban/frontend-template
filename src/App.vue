@@ -18,7 +18,7 @@
 import { onMounted } from "@vue/runtime-core";
 import { useI18n } from "vue-i18n";
 import { inject } from "vue";
-import { faker } from '@faker-js/faker';
+import { faker } from "@faker-js/faker";
 
 const randomName = faker.name.findName();
 const randomCity = faker.address.city();
@@ -35,10 +35,10 @@ onMounted(() => {
 
     console.log(message);
 
-    console.log(randomName)
-    console.log(randomCity)
+    console.log(randomName);
+    console.log(randomCity);
     console.log(randomBear);
-    console.log(randomAdverb)
+    console.log(randomAdverb);
 });
 </script>
 
