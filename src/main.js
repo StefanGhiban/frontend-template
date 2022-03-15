@@ -4,7 +4,7 @@ import { createPinia } from "pinia";
 import { faker } from "@faker-js/faker";
 import router from "./router";
 import App from "./App.vue";
-import "./index.css";
+import "@/assets/index.css"
 
 const i18n = createI18n();
 const pinia = createPinia();
