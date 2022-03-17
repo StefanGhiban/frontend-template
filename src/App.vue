@@ -4,26 +4,34 @@
     <HelloWorld msg="Hello Vue 3 + Vite" />
 
     <hr />
+    <button class="border border-purple-600 bg-gradient-to-r from-indigo-500 to-indigo-300 rounded-2xl text-white p-2" @click="toggleDark">
+        Toggle dark/light mode
+    </button>
     <div class="flex gap-x-2 justify-center py-4">
         <router-link :to="{ name: 'Home' }">Home</router-link>
         <router-link :to="{ name: 'About' }">About</router-link>
     </div>
     <hr />
-    <router-view></router-view>
+    <div class="bg-red-400 dark:bg-purple-400">
+        <router-view></router-view>
+    </div>
 </template>
 
 <script setup>
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-import { onMounted } from "@vue/runtime-core";
 import { useI18n } from "vue-i18n";
-import { inject } from "vue";
+import { inject, onMounted } from "vue";
 import { faker } from "@faker-js/faker";
+/** On initial load, the preference is based on the system.
+ * If system changes, the dark/light preference on the website changes.
+ * If user chooses to override the setting, the website will update, but the system
+ * change would no longer affect the website until the system setting is the same as the website setting
+ * after an initial load.
+ */
+import { toggleDark } from "@/composables/dark";
 
 const randomName = faker.name.findName();
-const randomCity = faker.address.city();
-const randomBear = faker.animal.bear();
-const randomAdverb = faker.word.adverb();
 
 const i18n = useI18n();
 
@@ -36,9 +44,6 @@ onMounted(() => {
     console.log(message);
 
     console.log(randomName);
-    console.log(randomCity);
-    console.log(randomBear);
-    console.log(randomAdverb);
 });
 </script>
 
