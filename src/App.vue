@@ -1,18 +1,21 @@
 <template>
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <div>okok</div>
-    <HelloWorld msg="Hello Vue 3 + Vite" />
+    <div class="bg-purple-300 dark:bg-purple-800 h-screen">
+        <img alt="Vue logo" src="./assets/logo.png" />
+        <div>okok</div>
+        <HelloWorld msg="Hello Vue 3 + Vite" />
 
-    <hr />
-    <button class="border border-purple-600 bg-gradient-to-r from-indigo-500 to-indigo-300 rounded-2xl text-white p-2" @click="toggleDark">
-        Toggle dark/light mode
-    </button>
-    <div class="flex gap-x-2 justify-center py-4">
-        <router-link :to="{ name: 'Home' }">Home</router-link>
-        <router-link :to="{ name: 'About' }">About</router-link>
-    </div>
-    <hr />
-    <div class="bg-red-400 dark:bg-purple-400">
+        <hr />
+        <button
+            class="border border-purple-600 bg-gradient-to-r from-indigo-500 to-indigo-300 rounded-2xl text-white p-2"
+            @click="toggleDark"
+        >
+            Toggle dark/light mode
+        </button>
+        <div class="flex gap-x-2 justify-center py-4">
+            <router-link :to="{ name: 'Home' }">Home</router-link>
+            <router-link :to="{ name: 'About' }">About</router-link>
+        </div>
+        <hr />
         <router-view></router-view>
     </div>
 </template>
@@ -46,14 +49,3 @@ onMounted(() => {
     console.log(randomName);
 });
 </script>
-
-<style>
-#app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-    margin-top: 60px;
-}
-</style>

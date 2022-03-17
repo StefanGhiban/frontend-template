@@ -33,7 +33,14 @@ const props = defineProps({
     },
 });
 
-const test = props.msg !== "" ? props.msg : props.msg === "okok" ? "kookk" : props.msg === "kkk" ? "kkk" : "okkkk";
+const test =
+    props.msg !== ""
+        ? props.msg
+        : props.msg === "okok"
+        ? "kookk"
+        : props.msg === "kkk"
+        ? "kkk"
+        : "okkkk";
 
 const count = ref(0);
 </script>
