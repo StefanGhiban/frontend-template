@@ -10,7 +10,7 @@
 <script setup>
 import { ref } from "vue";
 import { useCounterStore } from "../stores/counter";
-import { useTestStore } from "../stores/test";
+// import { useTestStore } from "../stores/test";
 
 const test = ref("testing");
 
@@ -19,6 +19,5 @@ function increment() {
     counter.increment();
 }
 
-const testing = useTestStore();
-console.log(testing.count);
+// const testing = useTestStore();
 </script>

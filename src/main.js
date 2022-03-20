@@ -4,12 +4,15 @@ import { createPinia } from "pinia";
 import { faker } from "@faker-js/faker";
 import router from "./router";
 import App from "./App.vue";
+import { configAxios } from "./utils/axiosConfig";
 import "@/assets/index.css";
 
 const i18n = createI18n();
 const pinia = createPinia();
 
 faker.setLocale("ro");
+
+configAxios();
 
 createApp(App)
     .use(i18n)
