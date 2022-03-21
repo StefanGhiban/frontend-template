@@ -31,7 +31,7 @@
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
 // import { useI18n } from "vue-i18n";
-import { inject, onMounted, ref, toRaw, onBeforeMount } from "vue";
+import { onMounted, ref } from "vue";
 // import { faker } from "@faker-js/faker";
 /** On initial load, the preference is based on the system.
  * If system changes, the dark/light preference on the website changes.
