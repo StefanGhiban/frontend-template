@@ -12,7 +12,7 @@ export default defineConfig({
         vueI18n({
             include: path.resolve(__dirname, "./src/locales/**"),
         }),
-        Components(),
+        Components({ dts: true }),
     ],
     resolve: {
         alias: {

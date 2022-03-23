@@ -55,7 +55,7 @@ async function addTodo() {
             title: "foo",
             body: "bar",
             userId: 1,
-            id: 200
+            id: 200,
         },
     });
 
