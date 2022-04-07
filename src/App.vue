@@ -13,12 +13,12 @@
 
         <hr />
         <button
-            class="border border-purple-600 bg-gradient-to-r from-indigo-500 to-indigo-300 rounded-2xl text-white p-2"
+            class="rounded-2xl border border-purple-600 bg-gradient-to-r from-indigo-500 to-indigo-300 p-2 text-white"
             @click="toggleDark"
         >
             Toggle dark/light mode
         </button>
-        <div class="flex gap-x-2 justify-center py-4">
+        <div class="flex justify-center gap-x-2 py-4">
             <router-link :to="{ name: 'Home' }">Home</router-link>
             <router-link :to="{ name: 'About' }">About</router-link>
         </div>

@@ -2,7 +2,7 @@
     <h1>{{ msg }}</h1>
     <h1>{{ test }}</h1>
 
-    <div class="text-red-600 font-black text-4xl">{{ $t("testObj.ok") }}</div>
+    <div class="text-4xl font-black text-red-600">{{ $t("testObj.ok") }}</div>
 
     <p>
         Recommended IDE setup:
